@@ -38,7 +38,7 @@ public class Reactor {
                         try {
                             handler.handleEvent(handle);
                         }finally {
-                            handle.cancel();
+                            handle.cancel();    //这里存在疑问，如果当前请求完成后，注销事件，那么是否所有的同类型事件都无法再次被响应
                         }
 
                     }
