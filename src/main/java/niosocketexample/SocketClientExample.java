@@ -18,7 +18,7 @@ public class SocketClientExample {
 
         String threadName=Thread.currentThread().getName();
         String[] messages=new String[]{
-            threadName+":test1",
+            threadName+":test中文会怎样",
             threadName+":test2",
             threadName+":test3"
         };
@@ -29,7 +29,7 @@ public class SocketClientExample {
             client.write(buffer);
             System.out.println(messages[i]);
             buffer.clear();
-            //Thread.sleep(5000);
+            Thread.sleep(5000);
         }
         client.close();
     }
